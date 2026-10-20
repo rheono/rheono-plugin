@@ -1,0 +1,11 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "rheono",
+  "version": "1.0.0",
+  "description": "Check a live app's security posture before you ship: TLS, headers, cookies, exposed paths.",
+  "author": { "name": "Rheono", "url": "https://rheono.dev" },
+  "homepage": "https://rheono.dev",
+  "repository": "https://github.com/rheono/rheono-plugin",
+  "license": "MIT",
+  "keywords": ["security", "pentest", "headers", "tls", "preflight", "appsec"]
+}
