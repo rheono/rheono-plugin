@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "rheono": {
-      "type": "http",
-      "url": "https://rheono.dev/api/mcp"
-    }
-  }
-}

@@ -1,0 +1,12 @@
+{
+  "name": "rheono-plugin",
+  "version": "1.0.0",
+  "description": "Rheono agent plugin: read-only pre-ship security check.",
+  "license": "MIT",
+  "mcpName": "dev.rheono/mcp",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rheono/rheono-plugin.git"
+  }
+}

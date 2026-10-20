@@ -3,9 +3,47 @@
   "name": "rheono",
   "version": "1.0.0",
   "description": "Check a live app's security posture before you ship: TLS, headers, cookies, exposed paths.",
-  "author": { "name": "Rheono", "url": "https://rheono.dev" },
+  "author": {
+    "name": "Rheono",
+    "url": "https://rheono.dev"
+  },
   "homepage": "https://rheono.dev",
   "repository": "https://github.com/rheono/rheono-plugin",
   "license": "MIT",
-  "keywords": ["security", "pentest", "headers", "tls", "preflight", "appsec"]
+  "keywords": [
+    "security",
+    "pentest",
+    "headers",
+    "tls",
+    "preflight",
+    "appsec"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Rheono",
+        "shortDescription": "Pre-ship security check",
+        "longDescription": "Checks a live app's security posture just before you deploy: TLS certificate state, missing security headers, cookie flags, server version disclosure and conventionally exposed admin, debug and environment paths. Read-only and shallow, answers in seconds, and never changes the target. Works on any public URL; a domain can be proven by DNS TXT so later checks reference it as an owned asset. The deeper probe and the email report come from request_pentest.",
+        "developerName": "Rheono",
+        "category": "Developer Tools",
+        "capabilities": [
+          "Check a URL's TLS and headers",
+          "Verify domain ownership by DNS",
+          "Request a deeper read-only pentest",
+          "Follow a pentest request"
+        ],
+        "websiteURL": "https://rheono.dev",
+        "supportURL": "https://rheono.dev/contact",
+        "privacyPolicyURL": "https://rheono.dev/privacy",
+        "termsOfServiceURL": "https://rheono.dev/terms",
+        "defaultPrompt": [
+          "Is this app ready to ship?",
+          "Check the security headers on my staging URL",
+          "Verify this domain is mine before you check it"
+        ],
+        "brandColor": "#2357C6",
+        "logo": "./assets/logo.svg"
+      }
+    }
+  }
 }

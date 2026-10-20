@@ -1,0 +1,12 @@
+{
+  "name": "rheono",
+  "version": "1.0.0",
+  "description": "Check a live app's security posture before you ship: TLS, headers, cookies, exposed paths.",
+  "author": { "name": "Rheono", "email": "security@rheono.dev", "url": "https://rheono.dev" },
+  "homepage": "https://rheono.dev",
+  "license": "MIT",
+  "keywords": ["security", "pentest", "headers", "tls", "preflight", "appsec"],
+  "logo": "assets/logo.svg",
+  "skills": "./skills/",
+  "mcpServers": "./mcp.json"
+}

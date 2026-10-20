@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "dev.rheono/mcp",
+  "title": "Rheono",
+  "description": "Read-only pre-ship security check for a live URL: TLS, headers, cookies, exposed paths, plus a deeper pentest request by email.",
+  "version": "1.0.0",
+  "websiteUrl": "https://rheono.dev",
+  "repository": {
+    "url": "https://github.com/rheono/rheono-plugin",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://rheono.dev/api/mcp"
+    }
+  ]
+}

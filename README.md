@@ -19,12 +19,23 @@ Served by the host `https://rheono.dev/api/mcp`.
 
 ## Install
 
-Hosts that read this manifest load the skill. `.mcp.json` points the agent at the
-remote server `https://rheono.dev/api/mcp`; nothing runs locally.
+`plugin.json` is the portable Agent Plugins manifest; `.cursor-plugin/plugin.json`
+is the Cursor-specific copy, and `mcp.json` points the agent at the remote server
+`https://rheono.dev/api/mcp`. Nothing runs locally.
 
 The server is unauthenticated and read-only. `check_app` is the only tool that
 touches the network, and it refuses private, loopback and metadata addresses, so
 it cannot be turned into a probe of the host it runs on.
+
+## Layout
+
+| Path | Purpose |
+|---|---|
+| `plugin.json` | Portable manifest, plus the OpenAI listing block under `extensions`. |
+| `.cursor-plugin/plugin.json` | Cursor marketplace manifest. |
+| `mcp.json` | The single remote server. |
+| `skills/preflight/SKILL.md` | The pre-deploy gate. |
+| `assets/logo.svg` | Square icon, 64×64. |
 
 ## Scope
 
