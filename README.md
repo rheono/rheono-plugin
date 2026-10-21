@@ -33,9 +33,20 @@ it cannot be turned into a probe of the host it runs on.
 |---|---|
 | `plugin.json` | Portable manifest, plus the OpenAI listing block under `extensions`. |
 | `.cursor-plugin/plugin.json` | Cursor marketplace manifest. |
-| `mcp.json` | The single remote server. |
+| `mcp.json` / `.mcp.json` | The single remote server. Cursor reads `mcp.json`, Grok and Claude Code read `.mcp.json`. |
 | `skills/preflight/SKILL.md` | The pre-deploy gate. |
 | `assets/logo.svg` | Square icon, 64×64. |
+
+## Network and credentials
+
+One endpoint, called by the host and by nothing else: `https://rheono.dev/api/mcp`
+(the remote MCP server). No credentials, no API key, no tokens. No lifecycle
+hooks and no local executables, so the plugin runs nothing on your machine — all
+scanning happens on our side. A check makes plain HTTPS requests to the host you
+name; certificates, headers and responses are read, nothing is written back.
+
+No telemetry. The only data leaving your machine is the host you ask about and,
+for a report, the email address you supply.
 
 ## Scope
 
